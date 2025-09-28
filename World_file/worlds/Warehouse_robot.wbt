@@ -1,0 +1,440 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/factory/containers/protos/WoodenBox.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.18574014053706797 -0.9509656355189062 0.24731550751093795 4.946281378402
+  position -3.939936556156818 -0.09662406708547078 23.272232198143204
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+  luminosity 0
+}
+RectangleArena {
+  translation 3.61 -2.62 0
+  rotation 0 1 0 0
+  floorSize 8 8
+  floorTileSize 1 1
+  wallHeight 1
+}
+WoodenBox {
+  translation 2.78998 -4.42002 0.49
+  rotation 0 0 -1 -5.307179586466759e-06
+  name "wooden box(1)"
+  size 3.9 0.4 0.9
+}
+WoodenBox {
+  translation 4.69998 -2.69002 0.49
+  rotation 0 0 -1 -5.307179586466759e-06
+  name "wooden box(4)"
+  size 3.9 0.4 0.9
+}
+WoodenBox {
+  translation 4.67998 -4.36002 0.49
+  rotation 0 0 -1 -5.307179586466759e-06
+  name "wooden box(2)"
+  size 3.9 0.4 0.9
+}
+WoodenBox {
+  translation 6.75998 -0.56002 0.49
+  rotation 0 0 -1 -5.307179586466759e-06
+  name "wooden box(5)"
+  size 1.7 0.2 0.8
+}
+WoodenBox {
+  translation 6.78998 -1.58002 0.49
+  rotation 0 0 -1 -5.307179586466759e-06
+  name "wooden box(6)"
+  size 1.7 0.1 0.8
+}
+WoodenBox {
+  translation 2.68998 -2.69002 0.49
+  rotation 0 0 -1 -5.307179586466759e-06
+  name "wooden box(3)"
+  size 3.9 0.4 0.9
+}
+Robot {
+  translation 7.14235 -1.0766 0.204628
+  rotation 0.0018033300823854118 0.0008103250370198237 0.9999980456850643 -3.137495307179586
+  children [
+    DEF WheelB HingeJoint {
+      jointParameters HingeJointParameters {
+        position -0.2514152868190056
+      }
+      device [
+        RotationalMotor {
+        }
+      ]
+    }
+    DEF Wheel_A HingeJoint {
+      jointParameters HingeJointParameters {
+        position 0.3120501112813266
+      }
+      device [
+        RotationalMotor {
+        }
+      ]
+    }
+    DEF LedD LED {
+      translation -0.25 0.283 0.2
+      rotation 0 1 0 4.692820414042842e-06
+      children [
+        DEF LD Shape {
+          appearance PBRAppearance {
+            metalness 0
+          }
+          geometry Cylinder {
+            height 0.05
+            radius 0.015
+          }
+        }
+      ]
+      name "led_4"
+      color [
+        1 0 0
+        1 1 0
+        0 0 1
+        0 1 0
+      ]
+    }
+    DEF LedC LED {
+      translation -0.25 -0.283 0.2
+      children [
+        DEF LC Shape {
+          appearance PBRAppearance {
+            metalness 0
+          }
+          geometry Cylinder {
+            height 0.05
+            radius 0.015
+          }
+        }
+      ]
+      name "led_3"
+      color [
+        1 0 0
+        1 1 0
+        0 0 1
+        0 1 0
+      ]
+    }
+    DEF LedB LED {
+      translation 0.25 -0.283 0.2
+      children [
+        DEF LB Shape {
+          appearance PBRAppearance {
+            metalness 0
+          }
+          geometry Cylinder {
+            height 0.05
+            radius 0.015
+          }
+        }
+      ]
+      name "led_2"
+      color [
+        1 0 0
+        1 1 0
+        0 0 1
+        0 1 0
+      ]
+    }
+    DEF LedA LED {
+      translation 0.25 0.283 0.2
+      children [
+        DEF LA Shape {
+          appearance PBRAppearance {
+            metalness 0
+          }
+          geometry Cylinder {
+            height 0.05
+            radius 0.015
+          }
+        }
+      ]
+      name "led_1"
+      color [
+        1 0 0
+        1 1 0
+        0 0 1
+        0 1 0
+      ]
+    }
+    DEF gps_back GPS {
+      translation -0.3 -0.1 0.11
+      children [
+        Solid {
+          translation 0 0.1 0
+          rotation 0 1 0 -1.5699996938995748
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 1 1 0
+                metalness 0
+              }
+              geometry Cylinder {
+                height 0.001
+                radius 0.03
+              }
+            }
+          ]
+        }
+      ]
+      name "gps_back"
+    }
+    BallJoint {
+      jointParameters BallJointParameters {
+        position 15041.571329176368
+        anchor -0.23 0 -0.2
+      }
+      jointParameters2 JointParameters {
+        position -2432.137675972303
+      }
+      jointParameters3 JointParameters {
+        position -260.33760382143197
+        axis 0 1 0
+      }
+      endPoint Solid {
+        translation -0.23022112641498887 -9.607498023689396e-05 -0.200384686592404
+        rotation -0.5358881618737731 -0.5909127489768798 0.6030306800322316 4.512023442780872
+        children [
+          DEF SmolA Shape {
+            appearance PBRAppearance {
+            }
+            geometry Sphere {
+              radius 0.04
+            }
+          }
+        ]
+        name "solid(7)"
+        boundingObject USE SmolA
+        physics Physics {
+        }
+      }
+    }
+    Lidar {
+      translation 0.3 0 0
+      children [
+        Solid {
+          translation -0.0075 0 -0.004
+          rotation -2.343280460602283e-09 0.9774071921221089 0.21136504154655075 4.80123e-06
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0 1 0
+                metalness 0
+              }
+              geometry Box {
+                size 0.025 0.1 0.08
+              }
+            }
+          ]
+        }
+      ]
+      rotationStep 0.261799
+      fieldOfView 3.14
+      verticalFieldOfView 1
+      numberOfLayers 1
+      near 0.1
+      minRange 0.1
+    }
+    DEF gps_front GPS {
+      translation 0.3 0 0.1
+      rotation 0 1 0 -1.5707996938995747
+      children [
+        Solid {
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.666667 0 0
+                metalness 0
+              }
+              geometry Cylinder {
+                height 0.001
+                radius 0.03
+              }
+            }
+          ]
+        }
+      ]
+      name "gps_front"
+    }
+    DEF A Solid {
+      translation 0.25 0 0.2
+      children [
+        DEF HoldA Shape {
+          appearance PBRAppearance {
+            baseColor 0 0 0
+          }
+          geometry Box {
+            size 0.03 0.53 0.04
+          }
+        }
+      ]
+      name "solid(2)"
+      boundingObject USE HoldA
+      physics Physics {
+      }
+    }
+    DEF B Solid {
+      translation -0.25 0 0.2
+      children [
+        DEF ShapeB Shape {
+          appearance PBRAppearance {
+            baseColor 0 0 0
+          }
+          geometry Box {
+            size 0.03 0.53 0.04
+          }
+        }
+      ]
+      name "solid(3)"
+      boundingObject USE ShapeB
+      physics Physics {
+      }
+    }
+    DEF C Solid {
+      translation 0.001516 0.25 0.2
+      rotation 9.5898e-09 -9.58979e-09 1 -1.5707953071795862
+      children [
+        DEF HoldC Shape {
+          appearance PBRAppearance {
+            baseColor 0 0 0
+          }
+          geometry Box {
+            size 0.03 0.5 0.04
+          }
+        }
+      ]
+      name "solid(4)"
+    }
+    DEF D Solid {
+      translation 0.001516 -0.25 0.2
+      rotation 9.5898e-09 -9.58979e-09 1 -1.5707953071795862
+      children [
+        DEF HoldC Shape {
+          appearance PBRAppearance {
+            baseColor 0 0 0
+          }
+          geometry Box {
+            size 0.03 0.5 0.04
+          }
+        }
+      ]
+      name "solid(5)"
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position 9989.182504445735
+        axis 0 1 0
+        anchor 0 -0.31 -0.19
+      }
+      device [
+        RotationalMotor {
+          name "left_motor"
+        }
+      ]
+      endPoint Solid {
+        translation 0 0.31999999999929857 -0.19
+        rotation -0.15717984495273318 0.698595429915965 -0.6980393410411501 3.453645639051183
+        children [
+          DEF Wheel-b Shape {
+            appearance PBRAppearance {
+              baseColor 0 0 0
+              metalness 0
+            }
+            geometry Cylinder {
+              height 0.06
+              radius 0.09
+            }
+          }
+        ]
+        name "solid(1)"
+        boundingObject USE Wheel-b
+        physics Physics {
+        }
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position 13619.638178007206
+        axis 0 1 0
+        anchor 0 -0.324149 -0.19
+      }
+      device [
+        RotationalMotor {
+          name "right_motor"
+        }
+      ]
+      endPoint Solid {
+        translation -0.000632844754405287 -0.3203442236697851 -0.19044983538167146
+        rotation -0.011785119271461005 -0.706812282450433 -0.7073029819963768 3.1163370824087306
+        children [
+          DEF Wheel-A Shape {
+            appearance PBRAppearance {
+              baseColor 0 0 0
+              metalness 0
+            }
+            geometry Cylinder {
+              height 0.06
+              radius 0.09
+            }
+          }
+        ]
+        boundingObject USE Wheel-A
+        physics Physics {
+        }
+      }
+    }
+    BallJoint {
+      jointParameters BallJointParameters {
+        position -101.45040027379633
+        anchor 0.23 0 -0.2
+      }
+      jointParameters2 JointParameters {
+        position 598.1482634886565
+      }
+      jointParameters3 JointParameters {
+        position 403.09582863136905
+        axis 0 1 0
+      }
+      endPoint Solid {
+        translation 0.2299075850804653 -0.00010673389565430622 -0.19960890500878603
+        rotation 0.7213323758885428 -0.3752660292441322 -0.582112541344311 3.4097792162815805
+        children [
+          DEF CasterA Shape {
+            appearance PBRAppearance {
+              metalness 0
+            }
+            geometry Sphere {
+              radius 0.04
+            }
+          }
+        ]
+        name "solid(6)"
+        boundingObject USE CasterA
+        physics Physics {
+        }
+      }
+    }
+    DEF Main-A Shape {
+      appearance PBRAppearance {
+        baseColor 0 0.533333 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.6 0.6 0.39
+      }
+    }
+  ]
+  boundingObject USE Main-A
+  physics Physics {
+  }
+  controller "my_412"
+}

@@ -1,0 +1,179 @@
+<?xml version="1.0"?>
+<robot name="C:/Users/alsaf/Desktop/Robot.urdf" xmlns:xacro="http://ros.org/wiki/xacro">
+  <link name="base_link">
+    <visual>
+      <geometry>
+        <box size="0.6 0.6 0.39"/>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.6 0.6 0.39"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="right_motor" type="continuous">
+    <parent link="base_link"/>
+    <child link="solid"/>
+    <axis xyz="-0.001204 -0.000673 0.999999"/>
+    <limit effort="10" velocity="10"/>
+    <origin xyz="0 -0.324149 -0.19" rpy="1.5692 -0.654034 -3.140075"/>
+  </joint>
+  <link name="solid">
+    <visual>
+      <origin xyz="0.000612 -0.000474 0.003805" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.09" length="0.06"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0.000612 -0.000474 0.003805" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.09" length="0.06"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="left_motor" type="continuous">
+    <parent link="base_link"/>
+    <child link="solid(1)"/>
+    <axis xyz="0 0.000796 -1"/>
+    <limit effort="10" velocity="10"/>
+    <origin xyz="0.000612 -0.310474 -0.186195" rpy="-1.571593 -1.067397 -3.141593"/>
+  </joint>
+  <link name="solid(1)">
+    <visual>
+      <origin xyz="0 0.000502 -0.63" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.09" length="0.06"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0.000502 -0.63" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.09" length="0.06"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="solid(5)">
+  </link>
+  <joint name="base_link_solid(5)_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="solid(5)"/>
+    <origin xyz="0.001516 -0.249498 -0.43" rpy="0 0 -1.570795"/>
+  </joint>
+  <link name="solid(4)">
+  </link>
+  <joint name="base_link_solid(4)_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="solid(4)"/>
+    <origin xyz="0.001516 0.25 0.2" rpy="0 0 -1.570795"/>
+  </joint>
+  <link name="solid(3)">
+    <visual>
+      <geometry>
+        <box size="0.03 0.53 0.04"/>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.03 0.53 0.04"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="base_link_solid(3)_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="solid(3)"/>
+    <origin xyz="-0.25 0 0.2" rpy="0 0 0"/>
+  </joint>
+  <link name="solid(2)">
+    <visual>
+      <geometry>
+        <box size="0.03 0.53 0.04"/>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.03 0.53 0.04"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="base_link_solid(2)_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="solid(2)"/>
+    <origin xyz="0.25 0 0.2" rpy="0 0 0"/>
+  </joint>
+  <link name="gps_front">
+  </link>
+  <joint name="base_link_gps_front_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="gps_front"/>
+    <origin xyz="0.3 0 0.1" rpy="3.141593 -1.570793 3.141593"/>
+  </joint>
+  <link name="solid_0">
+  </link>
+  <joint name="gps_front_solid_0_joint" type="fixed">
+    <parent link="gps_front"/>
+    <child link="solid_0"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </joint>
+  <link name="lidar">
+  </link>
+  <joint name="base_link_lidar_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="lidar"/>
+    <origin xyz="0.3 0 0" rpy="0 0 0"/>
+  </joint>
+  <link name="solid_1">
+  </link>
+  <joint name="lidar_solid_1_joint" type="fixed">
+    <parent link="lidar"/>
+    <child link="solid_1"/>
+    <origin xyz="-0.0075 0 -0.004" rpy="0 0.000005 0.000001"/>
+  </joint>
+  <link name="gps_back">
+  </link>
+  <joint name="base_link_gps_back_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="gps_back"/>
+    <origin xyz="-0.3 -0.1 0.11" rpy="0 0 0"/>
+  </joint>
+  <link name="solid_2">
+  </link>
+  <joint name="gps_back_solid_2_joint" type="fixed">
+    <parent link="gps_back"/>
+    <child link="solid_2"/>
+    <origin xyz="0 0.1 0" rpy="0 -1.57 0"/>
+  </joint>
+  <link name="led_1">
+  </link>
+  <joint name="base_link_led_1_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="led_1"/>
+    <origin xyz="0.25 0.283 0.2" rpy="0 0 0"/>
+  </joint>
+  <link name="led_2">
+  </link>
+  <joint name="base_link_led_2_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="led_2"/>
+    <origin xyz="0.25 -0.283 0.2" rpy="0 0 0"/>
+  </joint>
+  <link name="led_3">
+  </link>
+  <joint name="base_link_led_3_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="led_3"/>
+    <origin xyz="-0.25 -0.283 0.2" rpy="0 0 0"/>
+  </joint>
+  <link name="led_4">
+  </link>
+  <joint name="base_link_led_4_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="led_4"/>
+    <origin xyz="-0.25 0.283 0.2" rpy="0 0.000005 0"/>
+  </joint>
+  <link name="rotational motor">
+  </link>
+  <link name="rotational motor">
+  </link>
+</robot>

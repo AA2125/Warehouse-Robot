@@ -1,0 +1,339 @@
+#VRML_SIM R2019a utf8
+# license: Apache License 2.0
+# license url: http://www.apache.org/licenses/LICENSE-2.0
+# This is a proto file for Webots for the C:/users/alsaf/desktop/robot.urdf
+# Extracted from: C:\Users\alsaf\Desktop\Robot.urdf
+
+PROTO C:/users/alsaf/desktop/robot.urdf [
+  field  SFVec3f     translation  0 0 0
+  field  SFRotation  rotation     0 1 0 0
+  field  SFString    controller   "void"
+]
+{
+  Robot {
+    translation IS translation
+    rotation IS rotation
+    controller IS controller
+    children [
+      HingeJoint {
+        jointParameters HingeJointParameters {
+          axis nan nan nan
+          anchor 0.000000 -0.324149 -0.190000
+          dampingConstant 0.0
+          staticFriction 0.0
+        }
+        device [
+          RotationalMotor {
+            name "right_motor"
+            maxVelocity 10.0
+            maxTorque 10.0
+          }
+          PositionSensor {
+            name "right_motor_sensor"
+          }
+        ]
+        endPoint Solid {
+          translation 0.000000 -0.324149 -0.190000
+          rotation nan nan nan 3.141593
+          children [
+            Transform {
+              translation 0.000612 -0.000474 0.003805
+              rotation nan nan nan 3.141593
+              children [
+                Shape {
+                  appearance PBRAppearance {
+                    baseColor 0.500000 0.500000 0.500000
+                    transparency 0.000000
+                    roughness 1.000000
+                    metalness 0
+                    emissiveColor 0.000000 0.000000 0.000000
+                  }
+                  geometry Cylinder {
+                    radius 0.09
+                    height 0.06
+                  }
+                }
+              ]
+            }
+          ]
+          name "solid"
+          boundingObject Transform {
+            translation 0.000612 -0.000474 0.003805
+            rotation nan nan nan 3.141593
+            children [
+              Cylinder {
+                radius 0.09
+                height 0.06
+              }
+            ]
+          }
+          physics Physics {
+            density -1
+            mass 1.000000
+            centerOfMass [ 0.000000 0.000000 0.000000 ]
+          }
+        }
+      }
+      HingeJoint {
+        jointParameters HingeJointParameters {
+          axis nan nan nan
+          anchor 0.000612 -0.310474 -0.186195
+          dampingConstant 0.0
+          staticFriction 0.0
+        }
+        device [
+          RotationalMotor {
+            name "left_motor"
+            maxVelocity 10.0
+            maxTorque 10.0
+          }
+          PositionSensor {
+            name "left_motor_sensor"
+          }
+        ]
+        endPoint Solid {
+          translation 0.000612 -0.310474 -0.186195
+          rotation nan nan nan 3.141593
+          children [
+            Transform {
+              translation 0.000000 0.000502 -0.630000
+              rotation nan nan nan 3.141593
+              children [
+                Shape {
+                  appearance PBRAppearance {
+                    baseColor 0.500000 0.500000 0.500000
+                    transparency 0.000000
+                    roughness 1.000000
+                    metalness 0
+                    emissiveColor 0.000000 0.000000 0.000000
+                  }
+                  geometry Cylinder {
+                    radius 0.09
+                    height 0.06
+                  }
+                }
+              ]
+            }
+          ]
+          name "solid(1)"
+          boundingObject Transform {
+            translation 0.000000 0.000502 -0.630000
+            rotation nan nan nan 3.141593
+            children [
+              Cylinder {
+                radius 0.09
+                height 0.06
+              }
+            ]
+          }
+          physics Physics {
+            density -1
+            mass 1.000000
+            centerOfMass [ 0.000000 0.000000 0.000000 ]
+          }
+        }
+      }
+      Solid {
+        translation 0.001516 -0.249498 -0.430000
+        rotation nan nan nan 3.141593
+        name "solid(5)"
+        physics Physics {
+          density -1
+          mass 1.000000
+          centerOfMass [ 0.000000 0.000000 0.000000 ]
+        }
+      }
+      Solid {
+        translation 0.001516 0.250000 0.200000
+        rotation nan nan nan 3.141593
+        name "solid(4)"
+        physics Physics {
+          density -1
+          mass 1.000000
+          centerOfMass [ 0.000000 0.000000 0.000000 ]
+        }
+      }
+      Solid {
+        translation -0.250000 0.000000 0.200000
+        rotation 0.000000 1.000000 0.000000 0.000000
+        children [
+          Shape {
+            appearance PBRAppearance {
+              baseColor 0.500000 0.500000 0.500000
+              transparency 0.000000
+              roughness 1.000000
+              metalness 0
+              emissiveColor 0.000000 0.000000 0.000000
+            }
+            geometry Box {
+               size 0.03 0.53 0.04
+            }
+          }
+        ]
+        name "solid(3)"
+        boundingObject Box {
+           size 0.030000 0.530000 0.040000
+        }
+        physics Physics {
+          density -1
+          mass 1.000000
+          centerOfMass [ 0.000000 0.000000 0.000000 ]
+        }
+      }
+      Solid {
+        translation 0.250000 0.000000 0.200000
+        rotation 0.000000 1.000000 0.000000 0.000000
+        children [
+          Shape {
+            appearance PBRAppearance {
+              baseColor 0.500000 0.500000 0.500000
+              transparency 0.000000
+              roughness 1.000000
+              metalness 0
+              emissiveColor 0.000000 0.000000 0.000000
+            }
+            geometry Box {
+               size 0.03 0.53 0.04
+            }
+          }
+        ]
+        name "solid(2)"
+        boundingObject Box {
+           size 0.030000 0.530000 0.040000
+        }
+        physics Physics {
+          density -1
+          mass 1.000000
+          centerOfMass [ 0.000000 0.000000 0.000000 ]
+        }
+      }
+      Solid {
+        translation 0.300000 0.000000 0.100000
+        rotation nan nan nan 3.141593
+        children [
+          Solid {
+            translation 0.000000 0.000000 0.000000
+            rotation 0.000000 1.000000 0.000000 0.000000
+            name "solid_0"
+            physics Physics {
+              density -1
+              mass 1.000000
+              centerOfMass [ 0.000000 0.000000 0.000000 ]
+            }
+          }
+        ]
+        name "gps_front"
+        physics Physics {
+          density -1
+          mass 1.000000
+          centerOfMass [ 0.000000 0.000000 0.000000 ]
+        }
+      }
+      Solid {
+        translation 0.300000 0.000000 0.000000
+        rotation 0.000000 1.000000 0.000000 0.000000
+        children [
+          Solid {
+            translation -0.007500 0.000000 -0.004000
+            rotation nan nan nan 3.141593
+            name "solid_1"
+            physics Physics {
+              density -1
+              mass 1.000000
+              centerOfMass [ 0.000000 0.000000 0.000000 ]
+            }
+          }
+        ]
+        name "lidar"
+        physics Physics {
+          density -1
+          mass 1.000000
+          centerOfMass [ 0.000000 0.000000 0.000000 ]
+        }
+      }
+      Solid {
+        translation -0.300000 -0.100000 0.110000
+        rotation 0.000000 1.000000 0.000000 0.000000
+        children [
+          Solid {
+            translation 0.000000 0.100000 0.000000
+            rotation nan nan nan 3.141593
+            name "solid_2"
+            physics Physics {
+              density -1
+              mass 1.000000
+              centerOfMass [ 0.000000 0.000000 0.000000 ]
+            }
+          }
+        ]
+        name "gps_back"
+        physics Physics {
+          density -1
+          mass 1.000000
+          centerOfMass [ 0.000000 0.000000 0.000000 ]
+        }
+      }
+      Solid {
+        translation 0.250000 0.283000 0.200000
+        rotation 0.000000 1.000000 0.000000 0.000000
+        name "led_1"
+        physics Physics {
+          density -1
+          mass 1.000000
+          centerOfMass [ 0.000000 0.000000 0.000000 ]
+        }
+      }
+      Solid {
+        translation 0.250000 -0.283000 0.200000
+        rotation 0.000000 1.000000 0.000000 0.000000
+        name "led_2"
+        physics Physics {
+          density -1
+          mass 1.000000
+          centerOfMass [ 0.000000 0.000000 0.000000 ]
+        }
+      }
+      Solid {
+        translation -0.250000 -0.283000 0.200000
+        rotation 0.000000 1.000000 0.000000 0.000000
+        name "led_3"
+        physics Physics {
+          density -1
+          mass 1.000000
+          centerOfMass [ 0.000000 0.000000 0.000000 ]
+        }
+      }
+      Solid {
+        translation -0.250000 0.283000 0.200000
+        rotation nan nan nan 3.141593
+        name "led_4"
+        physics Physics {
+          density -1
+          mass 1.000000
+          centerOfMass [ 0.000000 0.000000 0.000000 ]
+        }
+      }
+      Shape {
+        appearance PBRAppearance {
+          baseColor 0.500000 0.500000 0.500000
+          transparency 0.000000
+          roughness 1.000000
+          metalness 0
+          emissiveColor 0.000000 0.000000 0.000000
+        }
+        geometry Box {
+           size 0.6 0.6 0.39
+        }
+      }
+    ]
+    name "base_link"
+    boundingObject Box {
+       size 0.600000 0.600000 0.390000
+    }
+    physics Physics {
+      density -1
+      mass 1.000000
+      centerOfMass [ 0.000000 0.000000 0.000000 ]
+    }
+  }
+}
